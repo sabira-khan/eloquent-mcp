@@ -1,0 +1,50 @@
+{
+    "name": "sabira-khan/eloquent-mcp",
+    "description": "Expose chosen Eloquent models to Claude Code and other MCP clients as a safe, read-only MCP server.",
+    "keywords": ["laravel", "eloquent", "mcp", "model context protocol", "claude", "ai"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sabira Khan",
+            "homepage": "https://sabirakhan.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^12.41.1|^13.0",
+        "illuminate/support": "^12.41.1|^13.0",
+        "laravel/mcp": "^1.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.30",
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SabiraKhan\\EloquentMcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SabiraKhan\\EloquentMcp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "pint --test"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SabiraKhan\\EloquentMcp\\EloquentMcpServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
